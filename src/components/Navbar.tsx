@@ -34,13 +34,13 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'
+      isScrolled ? 'bg-white shadow-neon' : 'bg-white/95 backdrop-blur-sm'
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-primary rounded-20 flex items-center justify-center neon-glow">
               <span className="text-white font-bold text-xl">T4A</span>
             </div>
             <div>
@@ -63,7 +63,7 @@ const Navbar = () => {
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+              className="bg-blue-600 text-white px-6 py-2 rounded-20 hover:bg-blue-700 transition-all duration-200 font-medium btn-rounded shadow-glow hover:shadow-neon"
             >
               Devis Gratuit
             </button>
@@ -71,7 +71,7 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 rounded-20 hover:bg-gray-100 transition-colors duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -85,14 +85,14 @@ const Navbar = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+                className="block w-full text-left py-2 px-4 text-gray-700 hover:bg-gray-100 transition-colors duration-200 rounded-20"
               >
                 {item.label}
               </button>
             ))}
             <button
               onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-2 px-4 mt-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
+              className="block w-full text-left py-2 px-4 mt-2 bg-blue-600 text-white rounded-20 hover:bg-blue-700 transition-colors duration-200 btn-rounded"
             >
               Devis Gratuit
             </button>

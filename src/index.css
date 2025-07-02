@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,7 +10,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Poppins', system-ui, sans-serif;
   }
 }
 
@@ -80,6 +80,24 @@ html {
   }
 }
 
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(13, 110, 253, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
@@ -105,6 +123,14 @@ html {
   animation: pulse 2s ease-in-out infinite;
 }
 
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite;
+}
+
 /* Initial state for scroll animations */
 .animate-on-scroll {
   opacity: 0;
@@ -124,6 +150,64 @@ html {
 
 .hover-lift:hover {
   transform: translateY(-5px);
+}
+
+/* Custom button styles */
+.btn-rounded {
+  border-radius: 20px !important;
+  transition: all 0.3s ease;
+}
+
+.btn-rounded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Lighting effects */
+.light-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-effect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.neon-glow {
+  position: relative;
+}
+
+.neon-glow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(45deg, #0d6efd, #ffc107, #198754);
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0.7;
+  animation: glow 2s ease-in-out infinite;
 }
 
 /* Custom scrollbar */
@@ -182,6 +266,13 @@ select:focus-visible {
 
 .shadow-glow {
   box-shadow: 0 0 20px rgba(13, 110, 253, 0.3);
+}
+
+.shadow-neon {
+  box-shadow: 
+    0 0 10px rgba(13, 110, 253, 0.3),
+    0 0 20px rgba(13, 110, 253, 0.2),
+    0 0 30px rgba(13, 110, 253, 0.1);
 }
 
 /* Animation delays */
