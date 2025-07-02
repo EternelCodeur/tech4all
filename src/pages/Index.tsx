@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
@@ -35,15 +36,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <PortfolioSection />
-      <WhyChooseSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
-      <FloatingContactButtons />
+      <Navbar />
+      <div className="pt-16"> {/* Add padding-top to account for fixed navbar */}
+        <div id="hero">
+          <HeroSection />
+        </div>
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="services">
+          <ServicesSection />
+        </div>
+        <div id="portfolio">
+          <PortfolioSection />
+        </div>
+        <div id="why-choose">
+          <WhyChooseSection />
+        </div>
+        <div id="testimonials">
+          <TestimonialsSection />
+        </div>
+        <div id="contact">
+          <ContactSection />
+        </div>
+        <Footer />
+        <FloatingContactButtons />
+      </div>
     </div>
   );
 };
