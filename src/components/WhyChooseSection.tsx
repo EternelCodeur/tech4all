@@ -1,5 +1,6 @@
 
 import React from 'react';
+import AnimatedCounter from './AnimatedCounter';
 
 const WhyChooseSection = () => {
   const advantages = [
@@ -32,7 +33,7 @@ const WhyChooseSection = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-on-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Pourquoi choisir <span className="text-blue-600">Tech4All</span> ?
           </h2>
@@ -45,7 +46,7 @@ const WhyChooseSection = () => {
           {advantages.map((advantage, index) => (
             <div 
               key={index}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-on-scroll"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className={`w-16 h-16 ${advantage.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -63,24 +64,20 @@ const WhyChooseSection = () => {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+        {/* Stats Section with Animated Counters */}
+        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-on-scroll">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Tech4All en chiffres
           </h3>
           
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-                100+
-              </div>
+              <AnimatedCounter end={100} suffix="+" />
               <div className="text-gray-700 text-lg">Projets réalisés</div>
             </div>
             
             <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-orange-500 mb-2 group-hover:scale-110 transition-transform duration-300">
-                98%
-              </div>
+              <AnimatedCounter end={98} suffix="%" />
               <div className="text-gray-700 text-lg">Clients satisfaits</div>
             </div>
             
@@ -92,9 +89,7 @@ const WhyChooseSection = () => {
             </div>
             
             <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-                5+
-              </div>
+              <AnimatedCounter end={5} suffix="+" />
               <div className="text-gray-700 text-lg">Années d'expérience</div>
             </div>
           </div>
