@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
@@ -7,6 +6,7 @@ import ServicesSection from '../components/ServicesSection';
 import PortfolioSection from '../components/PortfolioSection';
 import WhyChooseSection from '../components/WhyChooseSection';
 import TestimonialsSection from '../components/TestimonialsSection';
+import TeamSection from '../components/TeamSection';
 import ContactSection from '../components/ContactSection';
 import Footer from '../components/Footer';
 import FloatingContactButtons from '../components/FloatingContactButtons';
@@ -55,6 +55,9 @@ const Index = () => {
         </div>
         <div id="testimonials">
           <TestimonialsSection />
+        </div>
+        <div id="team">
+          <TeamSection />
         </div>
         <div id="contact">
           <ContactSection />
