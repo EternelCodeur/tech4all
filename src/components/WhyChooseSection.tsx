@@ -31,13 +31,13 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+    <section className="py-10 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             Pourquoi choisir <span className="text-blue-600">Tech4All</span> ?
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Votre succès est notre priorité. Découvrez ce qui nous différencie.
           </p>
         </div>
@@ -53,47 +53,17 @@ const WhyChooseSection = () => {
                 <span className="text-2xl">{advantage.icon}</span>
               </div>
               
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 {advantage.title}
               </h3>
               
-              <p className="text-gray-600 text-lg leading-relaxed">
+              <p className="text-gray-600 text-md leading-relaxed">
                 {advantage.description}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Stats Section with Animated Counters */}
-        <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 animate-on-scroll">
-          <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Tech4All en chiffres
-          </h3>
-          
-          <div className="grid md:grid-cols-4 gap-8 text-center">
-            <div className="group">
-              <AnimatedCounter end={100} suffix="+" />
-              <div className="text-gray-700 text-lg">Projets réalisés</div>
-            </div>
-            
-            <div className="group">
-              <AnimatedCounter end={98} suffix="%" />
-              <div className="text-gray-700 text-lg">Clients satisfaits</div>
-            </div>
-            
-            <div className="group">
-              <div className="text-4xl md:text-5xl font-bold text-green-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-                24/7
-              </div>
-              <div className="text-gray-700 text-lg">Support disponible</div>
-            </div>
-            
-            <div className="group">
-              <AnimatedCounter end={5} suffix="+" />
-              <div className="text-gray-700 text-lg">Années d'expérience</div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

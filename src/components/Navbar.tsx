@@ -26,7 +26,6 @@ const Navbar = () => {
   const menuItems = [
     { label: 'Accueil', id: 'hero' },
     { label: 'À propos', id: 'about' },
-    { label: 'Services', id: 'services' },
     { label: 'Réalisations', id: 'portfolio' },
     { label: 'Témoignages', id: 'testimonials' },
     { label: 'Équipe', id: 'team' },
@@ -62,12 +61,6 @@ const Navbar = () => {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-200 group-hover:w-full"></span>
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 text-white px-6 py-2 rounded-20 hover:bg-blue-700 transition-all duration-200 font-medium btn-rounded shadow-glow hover:shadow-neon"
-            >
-              Devis Gratuit
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,12 +84,6 @@ const Navbar = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="block w-full text-left py-2 px-4 mt-2 bg-blue-600 text-white rounded-20 hover:bg-blue-700 transition-colors duration-200 btn-rounded"
-            >
-              Devis Gratuit
-            </button>
           </div>
         )}
       </div>

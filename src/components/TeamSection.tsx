@@ -1,48 +1,29 @@
 
 import React from 'react';
-import { Linkedin, Twitter, Mail } from 'lucide-react';
+import { Linkedin, Github, Mail } from 'lucide-react';
+import ProfilImg from '../assets/img_profil.jpg';
 
 const TeamSection = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Jean-Baptiste Mbeng",
-      role: "CEO & Fondateur",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Expert en transformation digitale avec plus de 10 ans d'expérience",
-      linkedin: "#",
-      twitter: "#",
-      email: "jean@tech4all.ga"
+      name: "Ronn Joxy GNOSSIGUI-NGUA",
+      role: "Developpeur Full Stack & Support",
+      image: ProfilImg,
+      bio: "Expert en transformation digitale avec plus de 4 ans d'expérience",
+      linkedin: "https://www.linkedin.com/public-profile/settings",
+      github: "https://github.com/EternelCodeur",
+      email: "eternelcodeur@gmail.com"
     },
     {
       id: 2,
-      name: "Marie Ondo",
-      role: "Directrice Technique",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Développeuse fullstack passionnée par l'innovation technologique",
+      name: "Barros Wency OKANA OBOUOYI",
+      role: "Admintrateur Réseau",
+      image: ProfilImg,
+      bio: "Expert en admin reau",
       linkedin: "#",
-      twitter: "#",
+      github: "#",
       email: "marie@tech4all.ga"
-    },
-    {
-      id: 3,
-      name: "Paul Nguema",
-      role: "Chef de Projet",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Spécialiste en gestion de projets digitaux et accompagnement client",
-      linkedin: "#",
-      twitter: "#",
-      email: "paul@tech4all.ga"
-    },
-    {
-      id: 4,
-      name: "Sophie Mba",
-      role: "Designeuse UX/UI",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      bio: "Créatrice d'expériences utilisateur exceptionnelles et interfaces modernes",
-      linkedin: "#",
-      twitter: "#",
-      email: "sophie@tech4all.ga"
     }
   ];
 
@@ -57,16 +38,16 @@ const TeamSection = () => {
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             Notre <span className="text-gradient">Équipe</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Une équipe passionnée et experte, dédiée à votre réussite digitale
           </p>
         </div>
 
         {/* Team Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="animate-on-scroll grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {teamMembers.map((member, index) => (
             <div 
               key={member.id}
@@ -100,10 +81,10 @@ const TeamSection = () => {
                     <Linkedin size={18} className="text-blue-600 group-hover/social:text-white" />
                   </a>
                   <a 
-                    href={member.twitter} 
+                    href={member.github} 
                     className="w-10 h-10 bg-gray-100 hover:bg-gray-800 rounded-20 flex items-center justify-center transition-all duration-300 group/social"
                   >
-                    <Twitter size={18} className="text-gray-600 group-hover/social:text-white" />
+                    <Github size={18} className="text-gray-600 group-hover/social:text-white" />
                   </a>
                   <a 
                     href={`mailto:${member.email}`} 
@@ -115,21 +96,6 @@ const TeamSection = () => {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Call to Action */}
-        <div className="text-center mt-16 animate-on-scroll" style={{ animationDelay: '0.8s' }}>
-          <div className="glass-effect p-8 rounded-3xl max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Rejoignez notre équipe !
-            </h3>
-            <p className="text-gray-600 mb-6 leading-relaxed">
-              Nous recherchons constamment des talents passionnés pour renforcer notre équipe et relever de nouveaux défis ensemble.
-            </p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-20 font-semibold transition-all duration-300 transform hover:scale-105 shadow-glow hover:shadow-neon btn-rounded neon-glow">
-              Voir nos offres d'emploi
-            </button>
-          </div>
         </div>
       </div>
     </section>

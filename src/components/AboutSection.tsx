@@ -1,5 +1,7 @@
 
 import React from 'react';
+import AnimatedCounter from './AnimatedCounter';
+import { Compass,Globe } from 'lucide-react';
 
 const AboutSection = () => {
   return (
@@ -12,10 +14,10 @@ const AboutSection = () => {
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             À propos de <span className="text-gradient">Tech4All</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Votre partenaire technologique de confiance au Gabon
           </p>
         </div>
@@ -28,15 +30,15 @@ const AboutSection = () => {
               <div className="glass-effect p-8 rounded-3xl hover:shadow-neon transition-all duration-500 light-effect">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-primary rounded-20 flex items-center justify-center mr-4 neon-glow">
-                    <span className="text-2xl">🎯</span>
+                    <span className="text-2xl"><Compass  className="w-8 h-8 mr-0 text-white" /></span>
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900">Notre Mission</h3>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md text-gray-700 leading-relaxed">
                     Tech4All a pour mission de <span className="font-semibold text-blue-600">démocratiser l'accès aux technologies numériques</span> au Gabon et en Afrique.
                   </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md text-gray-700 leading-relaxed">
                     Nous croyons que chaque entreprise, quelle que soit sa taille, mérite d'avoir accès aux meilleures solutions technologiques pour prospérer dans l'économie numérique.
                   </p>
                 </div>
@@ -48,15 +50,15 @@ const AboutSection = () => {
               <div className="glass-effect p-8 rounded-3xl hover:shadow-neon transition-all duration-500 light-effect">
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-secondary rounded-20 flex items-center justify-center mr-4 neon-glow">
-                    <span className="text-2xl">🚀</span>
+                    <span className="text-2xl"><Globe  className="w-8 h-8 mr-0 text-blue-000" /></span>
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900">Notre Vision</h3>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md text-gray-700 leading-relaxed">
                     Devenir le <span className="font-semibold text-orange-600">leader des services numériques</span> en Afrique centrale en proposant des solutions innovantes, accessibles et adaptées aux besoins locaux.
                   </p>
-                  <p className="text-lg text-gray-700 leading-relaxed">
+                  <p className="text-md text-gray-700 leading-relaxed">
                     Nous accompagnons la transformation digitale avec humanité et expertise.
                   </p>
                 </div>
@@ -64,20 +66,28 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
-
+         <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            <span className='text-gradient'>Tech4All</span> en chiffres
+          </h3>
         {/* Stats Section */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-neon transition-all duration-300 animate-on-scroll delay-300 light-effect">
-            <div className="text-4xl font-bold text-blue-600 mb-2 animate-glow">5+</div>
+        <div className="grid md:grid-cols-4 gap-8 mb-16">
+          
+          <div className="text-center p-6 bg-white rounded-3xl shadow-lg animate-glow hover:shadow-neon transition-all duration-300 animate-on-scroll delay-300 light-effect">
+            <div className="text-4xl font-bold text-blue-600 mb-2"><AnimatedCounter end={10} suffix="+" /></div>
             <div className="text-gray-700 font-medium">Années d'expérience</div>
           </div>
           
-          <div className="text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-neon transition-all duration-300 animate-on-scroll delay-400 light-effect">
-            <div className="text-4xl font-bold text-orange-500 mb-2 animate-glow">100+</div>
+          <div className="text-center p-6 bg-white rounded-3xl shadow-lg animate-glow hover:shadow-neon transition-all duration-300 animate-on-scroll delay-400 light-effect">
+            <div className="text-4xl font-bold text-orange-500 mb-2"><AnimatedCounter end={100} suffix="+" /></div>
             <div className="text-gray-700 font-medium">Clients satisfaits</div>
           </div>
           
-          <div className="text-center p-6 bg-white rounded-3xl shadow-lg hover:shadow-neon transition-all duration-300 animate-on-scroll delay-500 light-effect">
+          <div className="text-center p-6 bg-white rounded-3xl shadow-lg animate-glow hover:shadow-neon transition-all duration-300 animate-on-scroll delay-400 light-effect">
+            <div className="text-4xl font-bold text-red-500 mb-2"><AnimatedCounter end={100} suffix="+" /></div>
+            <div className="text-gray-700 font-medium">Projets réalisés</div>
+          </div>
+
+          <div className="text-center p-6 bg-white rounded-3xl shadow-lg animate-glow hover:shadow-neon transition-all duration-300 animate-on-scroll delay-500 light-effect">
             <div className="text-4xl font-bold text-green-600 mb-2">24/7</div>
             <div className="text-gray-700 font-medium">Support technique</div>
           </div>

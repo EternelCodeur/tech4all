@@ -1,34 +1,28 @@
 
 import React, { useState, useEffect } from 'react';
+import { MessageCircle} from 'lucide-react';
 
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Marie Nkoghe",
-      company: "Directrice, EcoGabon",
-      image: "👩‍💼",
-      text: "Tech4All a transformé notre entreprise avec une solution web exceptionnelle. Leur accompagnement a été parfait du début à la fin.",
+      name: "Georges KASSAVI",
+      company: "Consul du Bénin à Port-Gentil",
+      image: <MessageCircle  className="w-8 h-8" />,
+      text: "Tech4All a transformé notre administration avec une solution web exceptionnelle. Leur accompagnement a été parfait du début à la fin. Cette application développée a permis de moderniser efficacement la gestion des usagers au sein du consulat. Elle offre une interface claire, fluide et adaptée à nos besoins. Un gain de temps considérable pour notre équipe. Je recommande à 100 % !',",
       rating: 5
     },
     {
-      name: "Jean Mbadinga",
-      company: "CEO, StartupLib",
-      image: "👨‍💼",
-      text: "Grâce à Tech4All, nous avons pu digitaliser tous nos processus. Une équipe professionnelle et réactive.",
+      name: "Stephen",
+      company: "DG Ivindo Capitals",
+      image: <MessageCircle  className="w-8 h-8" />,
+      text: "Grâce à Tech4All, nous avons pu digitaliser tous nos processus. Une équipe professionnelle et réactive, un vrai gain de temps pour tous !.",
       rating: 5
     },
     {
-      name: "Sarah Bouanga",
-      company: "Manager IT, BankGab",
-      image: "👩‍💻",
-      text: "Le support technique de Tech4All est exceptionnel. Ils sont toujours disponibles et trouvent des solutions rapidement.",
-      rating: 5
-    },
-    {
-      name: "Paul Ondoua",
-      company: "Fondateur, TechHub",
-      image: "👨‍🔬",
-      text: "Les formations dispensées par Tech4All ont révolutionné les compétences de notre équipe. Très recommandé !",
+      name: "Jacques Sébastien ALBERTINI",
+      company: "DG AGPS Gabon",
+      image: <MessageCircle  className="w-8 h-8" />,
+      text: "Le support technique de Tech4All est exceptionnel. Ils sont toujours disponibles et trouvent des solutions rapidement. vons bénéficié d’un accompagnement technique de qualité. Les incidents informatiques sont désormais traités avec réactivité et efficacité, ce qui améliore considérablement la productivité de nos équipes.",
       rating: 5
     }
   ];
@@ -44,20 +38,20 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
+    <section className="py-10 bg-gradient-to-br from-blue-50 to-orange-50">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 animate-on-scroll">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
             Témoignages <span className="text-blue-600">Clients</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-md text-gray-600 max-w-3xl mx-auto">
             Ce que nos clients disent de nos services
           </p>
         </div>
 
         <div className="relative max-w-4xl mx-auto animate-on-scroll">
           {/* Main Testimonial */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 text-center">
+          <div className="bg-white animate-slide-in-left rounded-2xl shadow-xl p-8 md:p-12 text-center">
             <div className="mb-6">
               <div className="w-20 h-20 mx-auto mb-4 bg-blue-100 rounded-full flex items-center justify-center text-4xl">
                 {testimonials[currentTestimonial].image}
@@ -65,17 +59,17 @@ const TestimonialsSection = () => {
               
               <div className="flex justify-center mb-4">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                  <span key={i} className="text-yellow-400 text-2xl">⭐</span>
+                  <span key={i} className="text-yellow-400 text-xl">⭐</span>
                 ))}
               </div>
             </div>
 
-            <blockquote className="text-xl md:text-2xl text-gray-700 mb-8 italic leading-relaxed">
+            <blockquote className="text-md md:text-md text-gray-700 mb-8 italic leading-relaxed">
               "{testimonials[currentTestimonial].text}"
             </blockquote>
 
             <div>
-              <div className="font-semibold text-gray-900 text-lg">
+              <div className="font-semibold text-gray-900 text-md">
                 {testimonials[currentTestimonial].name}
               </div>
               <div className="text-blue-600 font-medium">
@@ -100,33 +94,6 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* All testimonials grid for larger screens */}
-        <div className="grid md:grid-cols-2 gap-6 mt-16 animate-on-scroll">
-          {testimonials.map((testimonial, index) => (
-            <div 
-              key={index}
-              className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl flex-shrink-0">
-                  {testimonial.image}
-                </div>
-                <div className="flex-1">
-                  <div className="flex mb-2">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <span key={i} className="text-yellow-400">⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-gray-700 mb-3 italic">"{testimonial.text}"</p>
-                  <div>
-                    <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                    <div className="text-blue-600 text-sm">{testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

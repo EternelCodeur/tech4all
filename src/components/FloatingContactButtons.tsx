@@ -1,32 +1,33 @@
 
 import React, { useState } from 'react';
+import { MessageCircle, Mail, Phone } from 'lucide-react';
 
 const FloatingContactButtons = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const contactMethods = [
     {
-      icon: '💬',
+      icon: <MessageCircle className="w-8 h-8" />,
       label: 'WhatsApp',
-      href: 'https://wa.me/241XXXXXXXX',
+      href: 'https://wa.me/24174639507',
       color: 'bg-green-500 hover:bg-green-600'
     },
     {
-      icon: '✉️',
+      icon: <Mail className="w-8 h-8" />,
       label: 'Email',
-      href: 'mailto:contact@tech4all.ga',
+      href: 'mailto:eternelcodeur@tech4all.ga',
       color: 'bg-blue-500 hover:bg-blue-600'
     },
     {
-      icon: '📞',
+      icon: <Phone className="w-8 h-8" />,
       label: 'Appel',
-      href: 'tel:+241XXXXXXXX',
+      href: 'tel:+24165178757',
       color: 'bg-orange-500 hover:bg-orange-600'
     },
     {
-      icon: '💬',
+      icon: <MessageCircle className="w-8 h-8" />,
       label: 'SMS',
-      href: 'sms:+241XXXXXXXX',
+      href: 'sms:+24165178757',
       color: 'bg-purple-500 hover:bg-purple-600'
     }
   ];

@@ -23,7 +23,6 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
     'Développement Web & Mobile',
     'Support IT & Assistance',
     'Réseaux & Sécurité',
-    'Formations Numériques',
     'Audit & Conseil',
     'Solutions Cloud'
   ];
